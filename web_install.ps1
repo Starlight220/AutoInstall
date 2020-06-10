@@ -1,11 +1,12 @@
 ﻿param (
     [string]$url,
     [string]$filename,
-    [string]$storageDir = "C:\Users\Yotam\Downloads\AutoInstall"
+    [string]$storageDir = "C:\Users\Yotam\Downloads\AutoInstall",
+    [switch]$VerbosePreference = $false
 )
-Write-Output "$url"
-
-$webclient = New-Object System.Net.WebClient
 $filepath = "$storageDir\$filename"
-Write-Output $filepath
+if($VerbosePreference) {
+    Write-Output "URL: $url     Filepath: $filepath"
+} 
+$webclient = New-Object System.Net.WebClient
 $webclient.DownloadFile($url,$filepath)
