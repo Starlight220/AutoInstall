@@ -1,7 +1,7 @@
 ﻿param (
     [string]$url,
     [string]$filename,
-    [string]$storageDir = "C:\Users\Yotam\Downloads\AutoInstall",
+    [string]$storageDir = "$Env:Userprofile\Downloads\AutoInstall",
     [switch]$VerbosePreference = $false
 )
 $filepath = "$storageDir\$filename"
