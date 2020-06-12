@@ -1,1 +1,0 @@
-./web_install.ps1 -url "https://teusje.files.wordpress.com/2011/02/giraffe-header1.png" -filename "giraffe.jpg" -storageDir .\out -VerbosePreference $true
